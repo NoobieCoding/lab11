@@ -6,7 +6,7 @@ import java.io.*;
  * Append all the words from the dictionary to a StringBuilder. Compare how long
  * this takes to appending to String.
  * 
- * @author Nuttapong Rojanavanich (Base of teacher's code).
+ * @author Nuttapong Rojanavanich (Base on teacher's code).
  */
 public class Task6 implements Runnable {
 
@@ -14,7 +14,8 @@ public class Task6 implements Runnable {
 	private BufferedReader br;
 
 	/**
-	 * Constructor with no argument. Initialize BufferedReader.
+	 * Constructor with no argument. 
+	 * Initialize BufferedReader.
 	 */
 	public Task6() {
 		br = BufferedFactory.getBufferedReader();

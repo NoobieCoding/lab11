@@ -15,14 +15,15 @@ import tasktimer.TaskTimer.IntCounter;
  * be a non-static attribute of the runnable. Display summary statistics and
  * elapsed time.
  * 
- * @author Nuttapong Rojanavanich (Base of teacher's code).
+ * @author Nuttapong Rojanavanich (Base on teacher's code).
  */
 public class Task3 implements Runnable {
 
 	private BufferedReader br;
 
 	/**
-	 * Constructor with no argument. Initialize BufferedReader.
+	 * Constructor with no argument. 
+	 * Initialize BufferedReader.
 	 */
 	public Task3() {
 		br = BufferedFactory.getBufferedReader();

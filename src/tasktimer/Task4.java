@@ -13,14 +13,15 @@ import java.util.function.Consumer;
  * Then use the stream to compute summary statistics. This is same as task3,
  * except we use a Collector instead of Consumer.
  * 
- * @author Nuttapong Rojanavanich (Base of teacher's code).
+ * @author Nuttapong Rojanavanich (Base on teacher's code).
  */
 public class Task4 implements Runnable {
 
 	private BufferedReader br;
 
 	/**
-	 * Constructor with no argument. Initialize BufferedReader.
+	 * Constructor with no argument. 
+	 * Initialize BufferedReader.
 	 */
 	public Task4() {
 		br = BufferedFactory.getBufferedReader();

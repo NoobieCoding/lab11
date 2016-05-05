@@ -7,14 +7,15 @@ import java.util.Scanner;
  * Process all the words in a file using Scanner to read and parse input.
  * Display summary statistics and elapsed time.
  * 
- * @author Nuttapong Rojanavanich (Base of teacher's code).
+ * @author Nuttapong Rojanavanich (Base on teacher's code).
  */
 public class Task1 implements Runnable {
 
 	private Scanner in;
 
 	/**
-	 * Constructor with no argument. Initialize Scanner.
+	 * Constructor with no argument. 
+	 * Initialize Scanner.
 	 */
 	public Task1() {
 		in = new Scanner(Dictionary.getWordsAsStream());

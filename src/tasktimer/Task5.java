@@ -7,7 +7,7 @@ import java.io.IOException;
  * Append all the words from the dictionary to a String. This shows why you
  * should be careful about using "string1"+"string2".
  * 
- * @author Nuttapong Rojanavanich (Base of teacher's code).
+ * @author Nuttapong Rojanavanich (Base on teacher's code).
  */
 public class Task5 implements Runnable {
 
@@ -15,7 +15,8 @@ public class Task5 implements Runnable {
 	private BufferedReader br;
 
 	/**
-	 * Constructor with no argument. Initialize BufferedReader.
+	 * Constructor with no argument. 
+	 * Initialize BufferedReader.
 	 */
 	public Task5() {
 		br = BufferedFactory.getBufferedReader();

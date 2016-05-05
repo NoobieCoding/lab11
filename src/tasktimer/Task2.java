@@ -9,14 +9,15 @@ import java.io.*;
  * the readLine() method. readLine() returns null when there is no more input.
  * Display summary statistics and elapsed time.
  * 
- * @author Nuttapong Rojanavanich (Base of teacher's code).
+ * @author Nuttapong Rojanavanich (Base on teacher's code).
  */
 public class Task2 implements Runnable {
 
 	private BufferedReader br;
 
 	/**
-	 * Constructor with no argument. Initialize BufferedReader.
+	 * Constructor with no argument. 
+	 * Initialize BufferedReader.
 	 */
 	public Task2() {
 		br = BufferedFactory.getBufferedReader();

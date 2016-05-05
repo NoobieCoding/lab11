@@ -2,12 +2,11 @@ package student;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.Scanner;
 
 /**
  * A student with a name, student id, and birthday.
  * 
- * @author jim
+ * @author jim (setBirthdate edited by Nuttapong Rojanavanich)
  */
 public class Student {
 	private String id;
@@ -65,15 +64,19 @@ public class Student {
 	public String getId() {
 		return id;
 	}
-
 	
+	/**
+	 * Set birth date of this student.
+	 * If the argument is invalid print error message and throw exception.
+	 * @param datestr is date to be set (in form of String)
+	 */
 	private void setBirthdate(String datestr) {
 		DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		try {
 			birthdate = LocalDate.parse(datestr, dateFormatter);
 		} catch (Exception e) {
 			System.out.println("Invalid date format");
-			throw(e);
+			throw (e);
 		}
 	}
 

@@ -8,7 +8,7 @@ import java.util.function.*;
 /**
  * Display reminders of students having a birthday soon.
  * 
- * @author you
+ * @author Nuttapong Rojanavanich
  */
 public class StudentApp {
 
@@ -18,21 +18,23 @@ public class StudentApp {
 	 * Print the names (and birthdays) of students having a birthday in the
 	 * specified month.
 	 * 
-	 * @param students
-	 *            list of students
-	 * @param month
-	 *            the month to use in selecting birthdays
+	 * @param students is list of students
+	 * @param month is the month to use in selecting birthdays
 	 */
 	public void filterAndPrint(List<Student> students, Predicate<Student> filter, Consumer<Student> action,
 			Comparator<Student> compareMethod) {
 		students.stream().filter(filter).sorted(compareMethod).forEach(action);
 	}
-
+	
+	/**
+	 * Main method used to find the students that will have their birth day soon.
+	 * @param args not used.
+	 */
 	public static void main(String[] args) {
 		List<Student> students = Registrar.getInstance().getStudents();
 		StudentApp app = new StudentApp();
 		LocalDate today = LocalDate.now();
-		
+
 		Predicate<Student> nearBirthday = (st) -> (st.getBirthdate().getMonthValue() == today.getMonthValue());
 		Predicate<Student> birthdayInTwoWeeks = (st) -> (st.getBirthdate().getDayOfYear() - today.getDayOfYear() >= 0)
 				&& (st.getBirthdate().getDayOfYear() - today.getDayOfYear() <= DAYS_IN_TWO_WEEKS);

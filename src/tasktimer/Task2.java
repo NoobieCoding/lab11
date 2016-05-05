@@ -8,15 +8,23 @@ import java.io.*;
  * Process all the words in a file (one word per line) using BufferedReader and
  * the readLine() method. readLine() returns null when there is no more input.
  * Display summary statistics and elapsed time.
+ * 
+ * @author Nuttapong Rojanavanich (Base of teacher's code).
  */
 public class Task2 implements Runnable {
 
 	private BufferedReader br;
 
+	/**
+	 * Constructor with no argument. Initialize BufferedReader.
+	 */
 	public Task2() {
 		br = BufferedFactory.getBufferedReader();
 	}
 
+	/**
+	 * Run this programming construct.
+	 */
 	public void run() {
 
 		try {
@@ -40,6 +48,9 @@ public class Task2 implements Runnable {
 		}
 	}
 
+	/**
+	 * Return the description of this construct.
+	 */
 	public String toString() {
 		return "read words using BufferedReader.readLine() with a loop";
 	}

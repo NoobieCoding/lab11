@@ -10,23 +10,29 @@ import tasktimer.TaskTimer.IntCounter;
  * Process all the words in a file (one word per line) using BufferedReader and
  * the lines() method which creates a Stream of Strings (one item per line).
  * Then use the stream to compute summary statistics. In a lambda you cannot
- * access a local variable unless it is final, so (as a cludge) we use an
+ * access a local variable unless it is final, so (as a kludge) we use an
  * attribute for the count. When this method is rewritten as a Runnable, it can
  * be a non-static attribute of the runnable. Display summary statistics and
  * elapsed time.
+ * 
+ * @author Nuttapong Rojanavanich (Base of teacher's code).
  */
 public class Task3 implements Runnable {
 
 	private BufferedReader br;
 
+	/**
+	 * Constructor with no argument. Initialize BufferedReader.
+	 */
 	public Task3() {
 		br = BufferedFactory.getBufferedReader();
 	}
 
+	/**
+	 * Run this programming construct.
+	 */
 	public void run() {
 
-		long totalsize = 0;
-		long count = 0;
 		// This code uses Java's IntStream.average() method.
 		// But there is no way to also get the count of items.
 		// averageLength = br.lines().mapToInt( (word) -> word.length() )
@@ -45,6 +51,9 @@ public class Task3 implements Runnable {
 
 	}
 
+	/**
+	 * Return the description of this construct.
+	 */
 	public String toString() {
 		return "read words using BufferedReader and Stream";
 	}
